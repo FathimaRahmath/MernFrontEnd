@@ -3,6 +3,12 @@ import { Box,AppBar,Toolbar,Typography,Button  } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+
+   const handleLogout = () => {
+      sessionStorage.removeItem('userToken');
+      window.location.href = '/login';
+    }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -17,9 +23,10 @@ const Navbar = () => {
                     </Link> &nbsp;&nbsp;&nbsp;
 
                     <Link to={"/form"} style={{ textDecoration:"none",color:"white" }}> Add Employee
-                    </Link> &nbsp;&nbsp;&nbsp;
+            </Link> &nbsp;&nbsp;&nbsp;
+            
              
-                </Button> 
+                </Button> <Button color="inherit" onClick={handleLogout}>Logout</Button>
         </Toolbar>
       </AppBar>
     </Box>

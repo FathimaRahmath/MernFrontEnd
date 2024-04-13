@@ -3,12 +3,15 @@ import React from 'react';
 import { Container } from '@mui/material';
 
 import bg from '../components/bg.gif'
+import Navbar from './Navbar';
 const Home = () => {
     return (
   
     <Container >
       
-     <div >
+        <div >
+          <Navbar/>
+          
       <img src={bg} alt="" style={{ float: 'left', marginLeft: '10px' }} />
               <br /><br /><br /> <br /><br />
               <div style={{ float: 'right', marginLeft: '20px' }}>
